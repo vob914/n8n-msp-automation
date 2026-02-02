@@ -1,0 +1,23 @@
+app = "n8n-msp-automation"
+
+[env]
+  N8N_BASIC_AUTH_ACTIVE = "true"
+  N8N_BASIC_AUTH_USER = "admin"
+  N8N_BASIC_AUTH_PASSWORD = "6JFiPRYSu3K8Mi"
+  N8N_HOST = "n8n-msp-automation.fly.dev"
+  WEBHOOK_TUNNEL_URL = "https://n8n-msp-automation.fly.dev"
+
+[build]
+  image = "n8nio/n8n"
+
+[[services]]
+  internal_port = 5678
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
