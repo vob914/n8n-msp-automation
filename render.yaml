@@ -11,7 +11,7 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: "admin"
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: "sterkwachtwoord"
+        value: "6JFiPRYSu3K8Mi"
       - key: N8N_HOST
         value: n8n-docker.onrender.com
       - key: WEBHOOK_TUNNEL_URL
