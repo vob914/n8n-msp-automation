@@ -22,3 +22,17 @@ services:
         value: https://n8n-docker.onrender.com
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
+  - key: DB_TYPE
+    value: postgresdb
+  - key: DB_POSTGRESDB_HOST
+    value: njhordonllmhjxogiwfq.supabase.co
+  - key: DB_POSTGRESDB_PORT
+    value: 5432
+  - key: DB_POSTGRESDB_DATABASE
+    value: postgres
+  - key: DB_POSTGRESDB_USER
+    value: postgres
+  - key: DB_POSTGRESDB_PASSWORD
+    value: 6JFiPRYSu3K8Mi
+
+
