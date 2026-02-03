@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: n8n-docker
+    env: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "sterkwachtwoord"
+      - key: N8N_HOST
+        value: n8n-docker.onrender.com
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://n8n-docker.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-docker.onrender.com
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
